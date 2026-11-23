@@ -15,7 +15,7 @@ struct TodayView: View {
                 List {
                     overview(rows: rows, date: context.date)
                         .listRowBackground(Color.clear)
-                        .listRowInsets(EdgeInsets(top: 0, leading: 16, bottom: 8, trailing: 16))
+                        .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 8, trailing: 0))
 
                     Section("Scheduled doses") {
                         if rows.isEmpty {
@@ -30,6 +30,7 @@ struct TodayView: View {
                             } label: {
                                 TodayDoseRow(row: row)
                             }
+                            .alignmentGuide(.listRowSeparatorLeading) { _ in 0 }
                             .swipeActions(edge: .trailing, allowsFullSwipe: false) {
                                 if row.log == nil {
                                     Button("Taken", systemImage: "checkmark") {
@@ -50,7 +51,7 @@ struct TodayView: View {
                         Section("Reminders") {
                             if model.reminderAuthorization == .denied {
                                 Button("Open Notification Settings", systemImage: "bell.slash") {
-                                    if let url = URL(string: UIApplication.openSettingsURLString) { openURL(url) }
+                                    if let url = URL(string: UIApplication.openNotificationSettingsURLString) { openURL(url) }
                                 }
                             } else {
                                 Button("Enable Reminders", systemImage: "bell") {
@@ -129,9 +130,13 @@ struct TodayView: View {
                 }
             }
 
-            Label(syncStatus, systemImage: model.isOnline ? "arrow.triangle.2.circlepath" : "wifi.slash")
-                .font(.subheadline)
-                .foregroundStyle(.secondary)
+            HStack(spacing: 7) {
+                Image(systemName: model.isOnline ? "arrow.triangle.2.circlepath" : "wifi.slash")
+                    .accessibilityHidden(true)
+                Text(syncStatus)
+            }
+            .font(.subheadline)
+            .foregroundStyle(.secondary)
 
             if let error = model.refreshError, !rows.isEmpty {
                 Text(error).font(.footnote).foregroundStyle(.secondary)
@@ -159,11 +164,13 @@ struct TodayView: View {
 
 private struct TodayDoseRow: View {
     let row: DoseRow
+    @ScaledMetric(relativeTo: .subheadline) private var timeColumnWidth = 72.0
 
     var body: some View {
         ViewThatFits(in: .horizontal) {
-            HStack(spacing: 14) {
+            HStack(spacing: 10) {
                 doseTime
+                    .frame(width: timeColumnWidth, alignment: .leading)
                 doseLabel
                 Spacer(minLength: 4)
                 badges
@@ -206,13 +213,15 @@ struct DoseStatusBadge: View {
     let status: DoseStatus
 
     var body: some View {
-        Label(status.rawValue, systemImage: icon)
-            .font(.caption.weight(.semibold))
-            .foregroundStyle(.primary)
-            .padding(.horizontal, 8)
-            .padding(.vertical, 5)
-            .background(color.opacity(0.18), in: Capsule())
-            .accessibilityLabel(status.rawValue)
+        HStack(spacing: 5) {
+            Image(systemName: icon).accessibilityHidden(true)
+            Text(status.rawValue)
+        }
+        .font(.caption.weight(.semibold))
+        .foregroundStyle(.primary)
+        .padding(.horizontal, 8)
+        .padding(.vertical, 5)
+        .background(color.opacity(0.18), in: Capsule())
     }
 
     private var color: Color {
@@ -250,8 +259,11 @@ struct SyncBadge: View {
         case .synced: "checkmark.icloud"
         case .failed: "exclamationmark.icloud"
         }
-        Label(label, systemImage: icon)
-            .font(.caption)
-            .foregroundStyle(.secondary)
+        HStack(spacing: 5) {
+            Image(systemName: icon).accessibilityHidden(true)
+            Text(label)
+        }
+        .font(.caption)
+        .foregroundStyle(.secondary)
     }
 }

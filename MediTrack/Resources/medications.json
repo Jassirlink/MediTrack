@@ -1,0 +1,22 @@
+{
+  "medications": [
+    {
+      "id": "med_001",
+      "name": "Metformin",
+      "dosage": "500 mg",
+      "instructions": "Take after food",
+      "schedule": ["08:00", "20:00"],
+      "start_date": "2026-11-01",
+      "end_date": null
+    },
+    {
+      "id": "med_002",
+      "name": "Amoxicillin",
+      "dosage": "250 mg",
+      "instructions": "Complete the full course",
+      "schedule": ["07:00", "15:00", "23:00"],
+      "start_date": "2026-11-20",
+      "end_date": "2026-11-27"
+    }
+  ]
+}

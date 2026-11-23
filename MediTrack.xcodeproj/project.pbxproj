@@ -1,0 +1,516 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		091223B5474E6D27E5528A7D /* StoreAndSyncTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F391004C5A7C44111269DC /* StoreAndSyncTests.swift */; };
+		189C617D3EDDA1F939CD3760 /* ScheduleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D12A65875106C3549EA3403 /* ScheduleTests.swift */; };
+		209F1FFBA7C13F1474F47EFE /* MediTrackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFA8DDF6A8781102E977ADE /* MediTrackModel.swift */; };
+		3FA8E335546A3203045DC910 /* MedicationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF92802E367F8DC942B1575 /* MedicationDetailView.swift */; };
+		60B82D68CC9FB58C6571EFF9 /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFBC5FC9A3BD86CAA7EA2CA /* ViewModelTests.swift */; };
+		64A126017302F78977B406EA /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D1428506745640AD34910A /* APIClientTests.swift */; };
+		88A0EB66D47E94286417FA54 /* Medication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB74F8BC4B9C6F14150F7BD /* Medication.swift */; };
+		94534C05CA86CA133A33F7A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A34A7133A29D18EA2E2252D /* Assets.xcassets */; };
+		9CA883886CAFFBFB08B44012 /* DoseSyncQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138C5D5CF655D4331BA7275D /* DoseSyncQueue.swift */; };
+		A790A227C33F3A03ABE72698 /* MedicationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED22991DC99309935BA15494 /* MedicationStore.swift */; };
+		AF7638A6F207644C64955F57 /* LocalReminders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D1CE5C01B5919B88F6C2E /* LocalReminders.swift */; };
+		AFD128D50C27F05C12424DB8 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA859530D3FCB4352BA3435 /* TodayView.swift */; };
+		B28D01899634AF12D1A09276 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96F11187C38F80DE867C3C6 /* APIClient.swift */; };
+		B4140BDFC766ACEA063EC25B /* MediTrackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74FADC0463DBA1C9E606E6D /* MediTrackApp.swift */; };
+		FA93E3D05F15CB56D232CFF3 /* medications.json in Resources */ = {isa = PBXBuildFile; fileRef = BA96124180984AE3CB4290BF /* medications.json */; };
+		FF6F467913DB327930E69A00 /* CivilSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA462C183C0841D03A38D1F /* CivilSchedule.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0B54EF2E18DD38962E8D86D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 243BA5E281A958CC294ADB63 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F542AA4CA453872C7014C9D9;
+			remoteInfo = MediTrack;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0BFA8DDF6A8781102E977ADE /* MediTrackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediTrackModel.swift; sourceTree = "<group>"; };
+		138C5D5CF655D4331BA7275D /* DoseSyncQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoseSyncQueue.swift; sourceTree = "<group>"; };
+		3175A88DB547138922F16993 /* MediTrackTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = MediTrackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		353BEF5B8F47E5E23780B908 /* MediTrack.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = MediTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A34A7133A29D18EA2E2252D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3EB74F8BC4B9C6F14150F7BD /* Medication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medication.swift; sourceTree = "<group>"; };
+		48F391004C5A7C44111269DC /* StoreAndSyncTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreAndSyncTests.swift; sourceTree = "<group>"; };
+		4AF92802E367F8DC942B1575 /* MedicationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationDetailView.swift; sourceTree = "<group>"; };
+		5AA462C183C0841D03A38D1F /* CivilSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CivilSchedule.swift; sourceTree = "<group>"; };
+		7D12A65875106C3549EA3403 /* ScheduleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTests.swift; sourceTree = "<group>"; };
+		9E0D1CE5C01B5919B88F6C2E /* LocalReminders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalReminders.swift; sourceTree = "<group>"; };
+		B74FADC0463DBA1C9E606E6D /* MediTrackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediTrackApp.swift; sourceTree = "<group>"; };
+		BA96124180984AE3CB4290BF /* medications.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = medications.json; sourceTree = "<group>"; };
+		D4D1428506745640AD34910A /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
+		DBFBC5FC9A3BD86CAA7EA2CA /* ViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTests.swift; sourceTree = "<group>"; };
+		E96F11187C38F80DE867C3C6 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		EAA859530D3FCB4352BA3435 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		ED22991DC99309935BA15494 /* MedicationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationStore.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		1CA2ACC94555166965A55776 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				138C5D5CF655D4331BA7275D /* DoseSyncQueue.swift */,
+				9E0D1CE5C01B5919B88F6C2E /* LocalReminders.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		273ED8F6A74F53E775936BF6 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B74FADC0463DBA1C9E606E6D /* MediTrackApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		2E65684FB6C242E1D1112658 = {
+			isa = PBXGroup;
+			children = (
+				8B70137BED16A14D06FE4BC5 /* MediTrack */,
+				CC50D9B136297BC4AFCF24A9 /* MediTrackTests */,
+				9ADFDED3BF254A76FAF07434 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3F601013961113A651CD2FD7 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				5AA462C183C0841D03A38D1F /* CivilSchedule.swift */,
+				3EB74F8BC4B9C6F14150F7BD /* Medication.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		8B70137BED16A14D06FE4BC5 /* MediTrack */ = {
+			isa = PBXGroup;
+			children = (
+				273ED8F6A74F53E775936BF6 /* App */,
+				A3F46355AE0F7E3BEF52E0A3 /* Data */,
+				3F601013961113A651CD2FD7 /* Domain */,
+				EB1A97E4746319F1F59F3559 /* Features */,
+				C49BAE2393C2AC39F52FB43B /* Resources */,
+				1CA2ACC94555166965A55776 /* Services */,
+			);
+			path = MediTrack;
+			sourceTree = "<group>";
+		};
+		9ADFDED3BF254A76FAF07434 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				353BEF5B8F47E5E23780B908 /* MediTrack.app */,
+				3175A88DB547138922F16993 /* MediTrackTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A3F46355AE0F7E3BEF52E0A3 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E96F11187C38F80DE867C3C6 /* APIClient.swift */,
+				ED22991DC99309935BA15494 /* MedicationStore.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		C49BAE2393C2AC39F52FB43B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3A34A7133A29D18EA2E2252D /* Assets.xcassets */,
+				BA96124180984AE3CB4290BF /* medications.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CC50D9B136297BC4AFCF24A9 /* MediTrackTests */ = {
+			isa = PBXGroup;
+			children = (
+				D4D1428506745640AD34910A /* APIClientTests.swift */,
+				7D12A65875106C3549EA3403 /* ScheduleTests.swift */,
+				48F391004C5A7C44111269DC /* StoreAndSyncTests.swift */,
+				DBFBC5FC9A3BD86CAA7EA2CA /* ViewModelTests.swift */,
+			);
+			path = MediTrackTests;
+			sourceTree = "<group>";
+		};
+		EB1A97E4746319F1F59F3559 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				4AF92802E367F8DC942B1575 /* MedicationDetailView.swift */,
+				0BFA8DDF6A8781102E977ADE /* MediTrackModel.swift */,
+				EAA859530D3FCB4352BA3435 /* TodayView.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EFF1F73DA2B1648B93891128 /* MediTrackTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35B40CAD8BF655091801BF41 /* Build configuration list for PBXNativeTarget "MediTrackTests" */;
+			buildPhases = (
+				D0A6AC28D53A7DD7EF036B87 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3E6E5DE1264BD15A33651CC6 /* PBXTargetDependency */,
+			);
+			name = MediTrackTests;
+			packageProductDependencies = (
+			);
+			productName = MediTrackTests;
+			productReference = 3175A88DB547138922F16993 /* MediTrackTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F542AA4CA453872C7014C9D9 /* MediTrack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E82D86E3FBD21006242D991A /* Build configuration list for PBXNativeTarget "MediTrack" */;
+			buildPhases = (
+				F97E092A44CD4A08638622A4 /* Sources */,
+				09C89E8978FB66F47430D795 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MediTrack;
+			packageProductDependencies = (
+			);
+			productName = MediTrack;
+			productReference = 353BEF5B8F47E5E23780B908 /* MediTrack.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		243BA5E281A958CC294ADB63 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = B719CB17BDAB16FBBD85C132 /* Build configuration list for PBXProject "MediTrack" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 2E65684FB6C242E1D1112658;
+			minimizedProjectReferenceProxies = 1;
+			productRefGroup = 9ADFDED3BF254A76FAF07434 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F542AA4CA453872C7014C9D9 /* MediTrack */,
+				EFF1F73DA2B1648B93891128 /* MediTrackTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		09C89E8978FB66F47430D795 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94534C05CA86CA133A33F7A7 /* Assets.xcassets in Resources */,
+				FA93E3D05F15CB56D232CFF3 /* medications.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D0A6AC28D53A7DD7EF036B87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64A126017302F78977B406EA /* APIClientTests.swift in Sources */,
+				189C617D3EDDA1F939CD3760 /* ScheduleTests.swift in Sources */,
+				091223B5474E6D27E5528A7D /* StoreAndSyncTests.swift in Sources */,
+				60B82D68CC9FB58C6571EFF9 /* ViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F97E092A44CD4A08638622A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B28D01899634AF12D1A09276 /* APIClient.swift in Sources */,
+				FF6F467913DB327930E69A00 /* CivilSchedule.swift in Sources */,
+				9CA883886CAFFBFB08B44012 /* DoseSyncQueue.swift in Sources */,
+				AF7638A6F207644C64955F57 /* LocalReminders.swift in Sources */,
+				B4140BDFC766ACEA063EC25B /* MediTrackApp.swift in Sources */,
+				209F1FFBA7C13F1474F47EFE /* MediTrackModel.swift in Sources */,
+				88A0EB66D47E94286417FA54 /* Medication.swift in Sources */,
+				3FA8E335546A3203045DC910 /* MedicationDetailView.swift in Sources */,
+				A790A227C33F3A03ABE72698 /* MedicationStore.swift in Sources */,
+				AFD128D50C27F05C12424DB8 /* TodayView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3E6E5DE1264BD15A33651CC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F542AA4CA453872C7014C9D9 /* MediTrack */;
+			targetProxy = 0B54EF2E18DD38962E8D86D9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		02440C25ABF9DE634DC2084C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "$(inherited) -enable-upcoming-feature InferSendableFromCaptures";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		4C49803220D8540F017240AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = MediTrack;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.meditrack.assessment;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		5ECE84942CD68B2F3F8B2E2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = MediTrack;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.meditrack.assessment;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		5F734D75616DA8EEBB4F61D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_SWIFT_FLAGS = "$(inherited) -enable-upcoming-feature InferSendableFromCaptures";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		61025CCDA3AC331A03D84EB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.meditrack.assessment.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MediTrack.app/MediTrack";
+			};
+			name = Debug;
+		};
+		F257F90A6D9540E4F776A082 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.meditrack.assessment.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MediTrack.app/MediTrack";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		35B40CAD8BF655091801BF41 /* Build configuration list for PBXNativeTarget "MediTrackTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61025CCDA3AC331A03D84EB0 /* Debug */,
+				F257F90A6D9540E4F776A082 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B719CB17BDAB16FBBD85C132 /* Build configuration list for PBXProject "MediTrack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02440C25ABF9DE634DC2084C /* Debug */,
+				5F734D75616DA8EEBB4F61D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E82D86E3FBD21006242D991A /* Build configuration list for PBXNativeTarget "MediTrack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5ECE84942CD68B2F3F8B2E2D /* Debug */,
+				4C49803220D8540F017240AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 243BA5E281A958CC294ADB63 /* Project object */;
+}

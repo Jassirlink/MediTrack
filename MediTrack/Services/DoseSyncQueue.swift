@@ -4,15 +4,22 @@ import Network
 enum RetryPolicy {
     static let maximumAttempts = 5
 
-    static func recordFailure(_ error: Error, for log: inout DoseLog, now: Date) {
+    static func reserveAttempt(for log: inout DoseLog, now: Date) {
         log.attempts += 1
+        log.nextAttemptAt = nextDate(after: now, attempt: log.attempts)
+    }
+
+    static func recordFailure(_ error: Error, for log: inout DoseLog, now: Date) {
         log.failure = error.localizedDescription
         if log.attempts >= maximumAttempts || !isRetryable(error) {
             log.syncState = .failed
         } else {
-            let delay = TimeInterval(1 << log.attempts)
-            log.nextAttemptAt = now.addingTimeInterval(delay)
+            log.nextAttemptAt = nextDate(after: now, attempt: log.attempts)
         }
+    }
+
+    private static func nextDate(after date: Date, attempt: Int) -> Date {
+        date.addingTimeInterval(TimeInterval(1 << attempt))
     }
 
     private static func isRetryable(_ error: Error) -> Bool {
@@ -71,6 +78,18 @@ final class DoseSyncQueue {
                     scheduleWake(after: delay)
                     return
                 }
+
+                if log.attempts >= RetryPolicy.maximumAttempts {
+                    log.syncState = .failed
+                    log.failure = "The last sync attempt was interrupted."
+                    try store.saveSync(log)
+                    onChange?()
+                    continue
+                }
+
+                // Reserve the attempt before the request so a relaunch still respects the cap.
+                RetryPolicy.reserveAttempt(for: &log, now: now())
+                try store.saveSync(log)
 
                 do {
                     try await api.submit(log)

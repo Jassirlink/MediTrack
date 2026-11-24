@@ -54,14 +54,6 @@ xcodebuild -project MediTrack.xcodeproj -scheme MediTrack \
 
 The tests cover date boundaries, daylight saving, dose status, reminder planning and actions, POST encoding and idempotency, offline UI state, persistence across store opens, and the five-attempt retry cap. Test cases inject clocks and API outcomes, so they do not depend on the live date, real network, or randomized mock. To check system delivery, enable reminders, keep an unlogged dose near its scheduled time, then expand the delivered notification and choose **Snooze 10 min** or **Taken**. Reopen the app to check the original dose history after choosing Taken.
 
-## Record a 2–3 minute demo
-
-1. In **Product → Scheme → Edit Scheme → Run → Arguments**, add `-demo-controls` and `-demo-success` as separate launch arguments for a Debug run. This adds the **Simulate Offline** switch and makes the mock POST result deterministic for the recording.
-2. Launch online and wait for the Today list. Start recording. Show the scheduled dose times and open a medication to show its prescription and dose history.
-3. Go back to Today, scroll to **Demo controls**, and enable **Simulate Offline**. Swipe an unlogged row and tap **Taken**, or open its detail and tap **Mark Taken** or **Mark Skipped**. Show that Today and history already reflect the decision, with **Pending sync**.
-4. Turn off **Simulate Offline**. When the banner says **All logs synced**, reopen the same medication and show **Synced** in its history. Mention that the offline switch exercises the queue and that normal runs use `NWPathMonitor` and the randomized mock.
-5. On the Mac, use **⇧⌘5** to record the Simulator window or run `xcrun simctl io booted recordVideo MediTrack-demo.mov` and stop it with **Ctrl+C**. Use a fresh simulator or another unlogged dose if a previous run already logged the dose.
-
 ## Scope
 
 The bundled mock is assessment data. The app holds the current prescription list and dose log snapshots in memory alongside durable SwiftData storage. Paging history, authentication, production patient-data policies and background uploads are outside the assessment implementation.
